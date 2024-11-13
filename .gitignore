@@ -1,0 +1,41 @@
+# Ignora arquivos do Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+crash.log
+*.tfplan
+
+# Ignora arquivos grandes ou binários
+*.zip
+*.tar.gz
+*.rar
+*.exe
+*.iso
+*.dmg
+
+# Ignora arquivos de logs e caches
+*.log
+*.cache
+*.bak
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+venv/
+.env/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações do VSCode e IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
