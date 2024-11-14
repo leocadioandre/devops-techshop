@@ -154,15 +154,11 @@ jobs:
           run: |
             rm -rf .terraform
             rm -f .terraform.lock.hcl
-            terraform init -reconfigure -migrate-state
+            terraform init -reconfigure
 
         - name: Refresh Terraform State
           working-directory: infra
           run: terraform refresh
-
-        - name: Reinitialize Terraform Backend
-          working-directory: infra
-          run: terraform init -reconfigure -migrate-state
 
         - name: Show Destroy plan
           run: terraform plan -destroy
