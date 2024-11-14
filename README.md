@@ -1,7 +1,7 @@
 # TechShop - DevOps Automation Pipeline
-**Projeto da disciplina: Desenvolvimento com Devops
-**Curso: Analise e desenvolvimento de sistemas
-**Aluno: André Luís Mendes Leocádio
+**Projeto da disciplina: Desenvolvimento com Devops**
+**Curso: Analise e desenvolvimento de sistemas**
+**Aluno: André Luís Mendes Leocádio**
 
 Este é o projeto de implementação de práticas DevOps para o e-commerce **TechShop**, desenvolvido com foco na automação do ciclo de desenvolvimento de software, provisionamento de infraestrutura e deploy de aplicações. A solução proposta utiliza **CI/CD**, **Infraestrutura como Código (IaC)** com **Terraform**, e **Docker** para garantir agilidade, confiabilidade e escalabilidade.
 
