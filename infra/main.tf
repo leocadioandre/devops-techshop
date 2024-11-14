@@ -1,3 +1,9 @@
+provider "aws" {
+  region = "us-east-1"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+}
+
 terraform {
   backend "s3" {
     bucket         = "terraform-state-ads"           # Nome do bucket S3
@@ -5,12 +11,6 @@ terraform {
     region         = "us-east-1"                    # Região AWS
     encrypt        = true                           # Ativar criptografia
   }
-}
-
-provider "aws" {
-  region = "us-east-1"
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
 }
 
 resource "tls_private_key" "deployer_key" {
