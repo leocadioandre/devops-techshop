@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-ads"           # Nome do bucket S3
+    key            = "techshop/prod/terraform.tfstate" # Caminho no bucket (ambiente/projeto)
+    region         = "us-east-1"                    # Região AWS
+    encrypt        = true                           # Ativar criptografia
+  }
+}
+
 provider "aws" {
   region = "us-east-1"
   access_key = var.aws_access_key
