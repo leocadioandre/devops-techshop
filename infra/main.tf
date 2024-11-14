@@ -4,6 +4,15 @@ provider "aws" {
   secret_key = var.aws_secret_key
 }
 
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-ads"           # Nome do bucket S3
+    key            = "techshop/prod/terraform.tfstate" # Caminho no bucket (ambiente/projeto)
+    region         = "us-east-1"                    # Região AWS
+    encrypt        = true                           # Ativar criptografia
+  }
+}
+
 resource "tls_private_key" "deployer_key" {
   algorithm = "RSA"
   rsa_bits  = 4096
